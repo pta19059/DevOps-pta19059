@@ -1,0 +1,21 @@
+apiVersion: apps/version1
+kind: Deployment
+metadata:
+  name: isodate-service-Deployment
+  labels:
+    app: isodate-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: isodate-service
+  template:
+    metadata:
+      labels:
+        app: isodate-service
+    spec:
+      containers:
+      - name: isodate-service
+        image: pta19059/pta19059:iso-date-service-version1.0
+        ports:
+        - containerPort: 3000
