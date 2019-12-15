@@ -1,0 +1,12 @@
+apiVersion: version1
+kind: Service
+metadata:
+  name: aggregator
+spec:
+  selector:
+    app: aggregator
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8085

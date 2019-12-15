@@ -1,0 +1,21 @@
+apiVersion: apps/version1
+kind: Deployment
+metadata:
+  name: aggregator-Deployment
+  labels:
+    app: aggregator
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aggregator
+  template:
+    metadata:
+      labels:
+        app: aggregator
+    spec:
+      containers:
+      - name: aggregator
+        image: pta19059/pta19059:aggregator-version1.0
+        ports:
+        - containerPort: 8085
