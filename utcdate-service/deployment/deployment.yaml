@@ -1,0 +1,21 @@
+apiVersion: apps/version1
+kind: Deployment
+metadata:
+  name: utcdate-service-Deployment
+  labels:
+    app: utcdate-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: utcdate-service
+  template:
+    metadata:
+      labels:
+        app: utcdate-service
+    spec:
+      containers:
+      - name: utcdate
+        image: pta19059/pta19059:utc-date-service-version1.0
+        ports:
+        - containerPort: 3001
