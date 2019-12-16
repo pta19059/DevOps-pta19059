@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: isodate-service-Deployment
+  name: isodate-service-deployment
   labels:
     app: isodate-service
 spec:
