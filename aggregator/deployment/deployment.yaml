@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: aggregator
-        image: pta19059/pta19059:aggregator-version1.0
+        image: pta19059/aggregator:latest
         ports:
         - containerPort: 8085
