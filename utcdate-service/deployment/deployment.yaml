@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: utcdate-service-Deployment
+  name: utcdate-service-deployment
   labels:
     app: utcdate-service
 spec:
